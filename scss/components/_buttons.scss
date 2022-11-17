@@ -1,12 +1,15 @@
 @use '../custom' as *;
-
+@use '../components/mixins' as *;
 
 .btn-rounded {
    position: relative;
    padding: 0.9rem 3.5rem 0.9rem 1.2rem;
-   font-weight: 500;
+   font-weight: 600;
    margin: 0;
    border: 0.1rem solid rgba($primary, 0.6);
+   background-color: $white;
+   transition: all .3s;
+   
 
    span {
       position: absolute;
@@ -17,5 +20,38 @@
       right: 5px;
       transform: translateY(-50%);
       border-radius: 50%;
+      transition: all .3s;
+      
+
+      i {
+         color: $white;
+         font-size: 1rem;
+         line-height: 2.5rem;
+         transition: all .3s;
+
+      }
+   }
+
+   &:hover {
+      @include gradient;
+      color: $white;
+      border: 0.1rem solid rgba($white, 0.6);
+
+   }
+
+   &:hover span {
+      background-color: $white;
+   }
+
+   &:hover span i {
+      color: $primary;
+   }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+   .btn-rounded {
+      font-size: 14px;
+   
    }
 }

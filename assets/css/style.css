@@ -10772,6 +10772,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
 .btn-rounded {
   position: relative;
   padding: 0.9rem 3.5rem 0.9rem 1.2rem;
@@ -10780,6 +10790,11 @@ textarea.form-control-lg {
   border: 0.1rem solid rgba(153, 38, 240, 0.6);
   background-color: #fff;
   transition: all 0.3s;
+}
+@media (max-width: 991.98px) {
+  .btn-rounded {
+    display: none;
+  }
 }
 .btn-rounded span {
   position: absolute;
@@ -10817,6 +10832,59 @@ textarea.form-control-lg {
 }
 * {
   font-family: "Poppins", sans-serif;
+}
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.display-2--intros {
+  display: inline-block;
+  font-weight: 700;
+  color: #fff;
+}
+.display-2--description {
+  font-size: 1.3rem;
+  display: block;
+  color: #fff;
+  margin-top: 1.2rem;
+}
+@media (max-width: 767.98px) {
+  .display-2--description {
+    font-size: 1rem;
+  }
+}
+
+.intro-section {
+  background: linear-gradient(to right, #9926f0, #d122e3);
+  padding: 10rem 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.intros .video-box {
+  position: relative;
+}
+.intros .video-box a span i {
+  font-size: 6rem;
+  color: #d122e3;
+}
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6rem;
+  height: 6rem;
+  border: 0.5rem solid #fff;
+  border-radius: 50%;
+  animation: pulse-border 2s linear infinite;
+}
+.border-animation--1 {
+  animation-delay: 1s;
+}
+.border-animation--2 {
+  animation-delay: 1.5s;
 }
 
 .menu {

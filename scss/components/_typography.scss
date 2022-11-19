@@ -1,5 +1,30 @@
+@use '../custom' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
    font-family: 'Poppins', sans-serif;
+}
+
+.display-2 {
+   margin-bottom: 1rem;
+   text-transform: capitalize;
+
+   &--intros {
+      display: inline-block;
+      font-weight: 700;
+      color: $white;
+      
+   }
+   
+   &--description {
+      font-size: 1.3rem;
+      display: block;
+      color: $white;
+      margin-top: 1.2rem;
+
+      @include media-breakpoint-down(md) {
+         font-size: 1rem;
+      }
+   }
 }

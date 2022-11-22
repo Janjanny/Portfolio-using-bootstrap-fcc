@@ -1,0 +1,147 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.footer {
+   padding-top: 1rem;
+   background-color: $footer;
+}
+
+.contact-box {
+   position: relative;
+
+
+   &__icon {
+      width: 2rem;
+      stroke: $primary;
+
+      // target larger devices md-lg
+      @include media-breakpoint-up(sm) {
+         width: 4rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+         margin-left: auto;
+         
+      }
+   }
+
+   &__info {
+      padding: 0.4rem;
+
+      @include media-breakpoint-up(lg) {
+         margin-right: auto;
+         
+      }
+      &--title {
+         color: $white;
+         text-decoration: none;
+         font-size: 1rem;
+         font-weight: 600;
+
+         // target larger devices md-lg
+         @include media-breakpoint-up(sm) {
+            font-size: 1.2rem;
+
+         }
+      }
+
+      &--subtitle {
+         color: $gray-600;
+         text-decoration: none;
+         font-size: 0.8rem;
+
+         @include media-breakpoint-up(sm) {
+            font-size: 1rem;
+
+         }
+      }
+   }
+}
+
+
+.footer-sm {
+   a {
+      color: $white;
+      
+      i {
+         font-size: 1rem;
+         margin-left: 1rem;
+
+         @include media-breakpoint-up(md) {
+            font-size: 1.6rem;
+         }
+      }
+
+      &:hover {
+         i {
+            color: $primary;
+            transition: all .3s ease;
+         }
+      }
+   }
+}
+
+.company-list {
+   list-style-type: none;
+
+   li {
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+
+      a {
+         color: $white;
+         text-decoration: none;
+      }
+
+      &:hover  {
+         a {
+            color: $primary;
+            transition: all 0.3s ease;
+         }
+      }
+   }
+
+}
+
+.footer-bottom {
+   padding: 2rem;
+   background-color: $black;
+   cursor: default;
+   
+   &__copyright {
+      color: $gray-600;
+      padding-bottom: 2rem;
+
+      a {
+         text-decoration: none;
+         color: $gray-300;
+
+         &:hover {
+            color: $primary;
+            text-decoration: underline;
+            transition: all .3s ease;
+         }
+      }
+   }
+}
+
+
+// back to top button
+
+.back-to-top {
+   position: fixed;
+   width: 3rem;
+   height: 3rem;
+   right: 1.875rem;
+   bottom: 1.875rem;
+   z-index: 99;
+   text-align: center;
+   background-color: $primary;
+
+   i {
+      font-size: 1rem;
+      @include absoluteCenter;
+      color: $white;
+   }
+}
